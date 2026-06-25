@@ -1,0 +1,77 @@
+:root {
+  --primary-color: #6C25FF;
+  --primary-light: #D8C3FF;
+  --bg-page: #F7F7F7;
+  --bg-desktop: #F0F2F5;
+  --bg-card: #FFFFFF;
+  --text-dark: #1D2229;
+  --text-muted: #828282;
+  --border-color: #CBCBCB;
+  --border-focus: #6C25FF;
+  --error-color: #FF3B30;
+  --indicator-color: #6C25FF;
+  --border-radius-btn: 8px;
+  --border-radius-card: 12px;
+  
+  --font-title: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Poppins', sans-serif;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-desktop);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+.slide-in {
+  animation: slideIn var(--transition-normal) forwards;
+}

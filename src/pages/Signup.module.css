@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px 16px; /* 16px page padding */
+  background-color: #FFFFFF;
+}
+
+.header {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputFields {
+  display: flex;
+  flex-direction: column;
+}
+
+.agencySection {
+  margin-top: 4px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.agencyQuestion {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.asterisk {
+  color: var(--error-color);
+}
+
+.radioGroup {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hiddenRadio {
+  display: none;
+}
+
+.customRadio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+  transition: all var(--transition-fast);
+  background-color: var(--bg-card);
+}
+
+.checkedRadio {
+  border-color: var(--primary-color);
+}
+
+.checkedRadio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.radioText {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.errorText {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+  font-weight: 500;
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+.generalError {
+  background-color: rgba(255, 59, 48, 0.08);
+  border: 1px solid rgba(255, 59, 48, 0.15);
+  color: var(--error-color);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: var(--border-radius-btn);
+  margin-bottom: 20px;
+  text-align: left;
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+.actionWrapper {
+  margin-top: auto;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.submitButton {
+  width: 100%;
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border: none;
+  border-radius: var(--border-radius-btn);
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+  box-shadow: 0 4px 12px rgba(108, 37, 255, 0.2);
+}
+
+.submitButton:hover {
+  background-color: #5516E0;
+  box-shadow: 0 6px 16px rgba(108, 37, 255, 0.3);
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+}

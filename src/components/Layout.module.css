@@ -1,0 +1,55 @@
+.desktopContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--bg-desktop);
+  box-sizing: border-box;
+}
+
+.phoneFrame {
+  width: 375px;
+  height: 812px;
+  max-height: 90vh; /* Adjust for shorter screens */
+  background-color: var(--bg-page);
+  border-radius: 36px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
+  border: 10px solid #1D2229; /* Sleek bezel */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 480px) {
+  .desktopContainer {
+    padding: 0;
+    background-color: var(--bg-page);
+  }
+
+  .phoneFrame {
+    width: 100vw;
+    height: 100svh;
+    max-height: 100svh;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+}

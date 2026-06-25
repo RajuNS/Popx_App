@@ -1,0 +1,71 @@
+.btn {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 24px;
+  border: none;
+  border-radius: var(--border-radius-btn);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--transition-fast);
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary Purple Style */
+.primary {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(108, 37, 255, 0.2);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #5516E0;
+  box-shadow: 0 6px 16px rgba(108, 37, 255, 0.3);
+}
+
+/* Secondary Light Purple Style */
+.secondary {
+  background-color: var(--primary-light);
+  color: var(--text-dark);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: #C0A4FF;
+  box-shadow: 0 4px 12px rgba(216, 195, 255, 0.3);
+}
+
+/* Filled Gray Style */
+.gray {
+  background-color: #CBCBCB;
+  color: #FFFFFF;
+}
+
+.gray:hover:not(:disabled) {
+  background-color: var(--text-dark);
+  box-shadow: 0 4px 12px rgba(29, 34, 41, 0.15);
+}
+
+/* Add active styling for inputs filled condition in login page */
+.grayActive {
+  background-color: var(--primary-color) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(108, 37, 255, 0.2);
+}

@@ -1,0 +1,85 @@
+.avatarWrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.avatarCircle {
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--primary-light);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  color: var(--primary-color);
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.editable {
+  cursor: pointer;
+}
+
+.editOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.avatarCircle:hover .editOverlay {
+  opacity: 1;
+}
+
+.cameraIcon {
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+}
+
+.onlineIndicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--indicator-color); /* Small purple online indicator */
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(108, 37, 255, 0.3);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniCameraIcon {
+  width: 12px;
+  height: 12px;
+  color: #FFFFFF;
+}
+
+.hiddenInput {
+  display: none;
+}

@@ -1,0 +1,93 @@
+.container {
+  margin-bottom: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-btn); /* 8px border radius */
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 15px;
+  font-family: var(--font-body);
+  pointer-events: none;
+  transition: all var(--transition-fast);
+  background-color: transparent;
+  line-height: 1;
+}
+
+/* Floating states - true Material UI Outlined float on border line */
+.floating {
+  top: 0;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  padding: 0 5px;
+  left: 12px;
+}
+
+.focused {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px rgba(108, 37, 255, 0.1);
+}
+
+.focused .label {
+  color: var(--primary-color);
+}
+
+.errorBorder {
+  border-color: var(--error-color) !important;
+  box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.1) !important;
+}
+
+.errorBorder .label {
+  color: var(--error-color) !important;
+}
+
+.asterisk {
+  color: var(--error-color);
+}
+
+.errorText {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 4px;
+  margin-left: 4px;
+  font-weight: 500;
+  text-align: left;
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+.input::placeholder {
+  color: transparent;
+  transition: color var(--transition-fast);
+}
+
+.input:focus::placeholder {
+  color: var(--text-muted);
+}
